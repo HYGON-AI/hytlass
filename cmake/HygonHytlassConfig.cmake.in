@@ -1,0 +1,9 @@
+get_filename_component(HygonHytlass_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependencyMacro)
+
+if(TARGET hygon::hytlass::HYTLASS)
+  return()
+endif()
+
+include("${HygonHytlass_CMAKE_DIR}/HygonHytlassTargets.cmake")
